@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form submitted Successfully</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .container
+        {
+           width: 50%;
+        }
+        img
+        {
+            width: 100%;
+        }
+        h2 , p
+        {
+            text-align: center;
+        }
+        p
+        {
+        p {
+          font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Predicted flight price: </h1>
+        <p>Your predicted flight price is {{ value[0] }}!</p>
+    </div>
+</body>
+</html>
