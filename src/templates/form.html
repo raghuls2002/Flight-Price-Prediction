@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Price Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Price Prediction System</h1>
+        <form action="/submit" method="post">
+        {% for col in cols if col in categorical_cols %}
+        <p>{{ col }} : <select name="{{ col }}"></p>
+          {% for i in label_map[col].keys() %}
+          <option value="{{ i }}">{{ i }}</option>
+         {% endfor %}
+        </select>
+        {% endfor %}
+        
+        <p>Duration : <input name="duration" type="number" step="0.01" min="2" max="30" required></p>
+        <p>Days left : <input name="days_left" type="number" step="1" min="1" max="49" required></p>
+        
+            <div class="input-group">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
