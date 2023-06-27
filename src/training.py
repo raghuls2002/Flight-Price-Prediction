@@ -5,7 +5,7 @@ Created on Sun Jun 25 23:08:43 2023
 @author: user
 """
 
-from preprocessing import X_train, X_test, y_train, y_test
+from preprocessing import X_train_s, X_test_s, y_train, y_test
 
 # Building ML model
 from sklearn.ensemble import RandomForestRegressor
@@ -14,11 +14,11 @@ model = RandomForestRegressor(n_estimators=100, random_state=42)
 
 
 # Training ML Model
-model.fit(X_train, y_train)
+model.fit(X_train_s, y_train)
 
 
 # Testing ML Model
-y_pred = model.predict(X_test)
+y_pred = model.predict(X_test_s)
 print(y_pred)
 
 
