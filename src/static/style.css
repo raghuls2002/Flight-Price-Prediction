@@ -18,15 +18,15 @@ body {
 
 .container {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 50px auto;
-    padding: 20px;
+    padding: 30px;
     width: 500px;
 }
 
-h1 {
-    font-size: 32px;
+h2 {
+    font: bold, 30px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -39,5 +39,13 @@ label {
     display: block;
     font-size: 18px;
     margin-bottom: 5px;
+}
+button
+{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 16px;
+    font: bold, 16px;
 }
 
