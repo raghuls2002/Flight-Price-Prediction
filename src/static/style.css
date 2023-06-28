@@ -12,6 +12,10 @@ Created on Fri Apr  7 20:27:07 2023
 }
 
 body {
+    height: 650px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
 }
@@ -25,10 +29,10 @@ body {
     width: 500px;
 }
 
-h2 {
-    font: bold, 30px;
+h4 {
+    font: bold, 25px;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 .input-group {
@@ -40,7 +44,7 @@ label {
     font-size: 18px;
     margin-bottom: 5px;
 }
-button
+.container button
 {
     width: 40%;
     margin-left: 30%;
@@ -48,4 +52,17 @@ button
     border-radius: 16px;
     font: bold, 16px;
 }
+
+button:hover {
+    /* Effect on hover */
+    transform: scale(1.02);
+    background-color: #45a049;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:active {
+    /* Effect on click */
+    transform: scale(0.95);
+    background-color: #3e8e41;
+  }
 
