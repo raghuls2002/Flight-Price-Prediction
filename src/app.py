@@ -36,8 +36,7 @@ def time_categorizer(hr:int)->str:
     
 @app.route('/')
 def home():
-    min_date = (date.today() + timedelta(days=1)).isoformat()
-    return render_template('form.html',  label_map = label_map, min_date = min_date)
+    return render_template('form.html',  label_map = label_map)
 
 @app.route('/submit', methods=['POST'])
 def register():
@@ -55,9 +54,12 @@ def register():
     destination_city = label_map["destination_city"][request.form["destination_city"]]    
     class_ = label_map["class"][request.form["class"]]    
     
-    
-    combined_datetime = datetime.combine(departure_datetime.date(), arrival_time_)
-    time_diff = combined_datetime - departure_datetime
+    if departure_datetime.hour> arrival_time_.hour :
+        arrival_datetime = datetime.combine(departure_datetime.date()+ timedelta(days=1), arrival_time_)
+    else:
+        arrival_datetime = datetime.combine(departure_datetime.date(), arrival_time_)
+        
+    time_diff = arrival_datetime - departure_datetime
     duration = time_diff.total_seconds() / 3600
     
     current_date = datetime.now()
