@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
         body {
-                background-image: url("{{ url_for('static', filename='image1.jpg') }}");
+                background-image: url("{{ url_for('static', filename='image6.jpg') }}");
             }
     </style>
 </head>
@@ -73,31 +73,22 @@
 
         <div class="form-group">
             <label for="stops">Number of stops</label>
-                <select name="stops"  class="form-control" id="stops" placeholder="Select number of stops">
+                <select name="stops"  class="form-control" id="stops" placeholder="Select no of stops">
                     {% for i in label_map["stops"].keys() %}
                         <option value="{{ i }}">{{ i }}</option>
                     {% endfor %}
                 </select>
         </div>
         
-        <fieldset class="form-group">
-        <div class="row">
-              <legend class="col-form-label col pt-0" font-size="18px">Class</legend>
-              <div class="col-sm-9">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="class" id="economy" value="Economy" checked>
-                  <label class="form-check-label" for="economy">
-                    Economy
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="class" id="business" value="Business">
-                  <label class="form-check-label" for="business">
-                    Business
-                  </label>
-                </div>
-            </div>
+        <div class="form-group">
+            <label for="class">Class</label>
+                <select name="class"  class="form-control" id="class" placeholder="Select the class">
+                    {% for i in label_map["class"].keys() %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                </select>
         </div>
+        
         </fieldset>
         
             <div class="input-group">
