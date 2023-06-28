@@ -4,10 +4,32 @@
     <title>Flight Price Prediction System</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+                background-image: url("{{ url_for('static', filename='image1.jpg') }}");
+            }
+    </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><h4>Flight Price Prediction System</h4></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://github.com/raghuls2002/Flight-Price-Prediction"><img src="{{ url_for('static', filename='github.png') }}" width="40px" height="40px"></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
     <div class="container">
-        <h2>Flight Price Prediction System</h2>
         <form action="/submit" method="post">
 
         <div class="form-group">
@@ -41,11 +63,11 @@
         <div class="form-row">
                 <div class="form-group col">
                     <label for="departure_time"> Departure date & time </label>
-                    <input name="departure_time" class="form-control" type="datetime-local" id="departure-time" min="{{ min_date }}">
+                    <input name="departure_time" class="form-control" type="datetime-local" id="departure-time" min="{{ min_date }}" required>
                   </div>
                 <div class="form-group col">
                     <label for="arrival_time">Arrival time</label>
-                     <input name="arrival_time" class="form-control" type="time" id="arrival-time">
+                     <input name="arrival_time" class="form-control" type="time" id="arrival-time" required>
                  </div>
         </div>
 
