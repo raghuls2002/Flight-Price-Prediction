@@ -63,7 +63,7 @@
         <div class="form-row">
                 <div class="form-group col">
                     <label for="departure_time"> Departure date & time </label>
-                    <input name="departure_time" class="form-control" type="datetime-local" id="departure-time" required>
+                    <input name="departure_time" class="form-control" type="datetime-local" id="departure-time" min="{{ min_date }}" required>
                   </div>
                 <div class="form-group col">
                     <label for="arrival_time">Arrival time</label>
