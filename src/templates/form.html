@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
         body {
-                background-image: url("{{ url_for('static', filename='image6.jpg') }}");
+                background-image: url("{{ url_for('static', filename='image2.jpg') }}");
             }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="#"><h4>Flight Price Prediction System</h4></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -20,11 +20,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="https://github.com/raghuls2002/Flight-Price-Prediction"><img src="{{ url_for('static', filename='github.png') }}" width="40px" height="40px"></a>
+            <a class="nav-link" href="https://github.com/raghuls2002/Flight-Price-Prediction"><img src="{{ url_for('static', filename='flight.png') }}" width="40px" height="40px"></a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0" action="https://www.google.com/search" method="get" target="_blank">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
@@ -63,7 +63,7 @@
         <div class="form-row">
                 <div class="form-group col">
                     <label for="departure_time"> Departure date & time </label>
-                    <input name="departure_time" class="form-control" type="datetime-local" id="departure-time" min="{{ min_date }}" required>
+                    <input name="departure_time" class="form-control" type="datetime-local" id="departure-time" required>
                   </div>
                 <div class="form-group col">
                     <label for="arrival_time">Arrival time</label>
@@ -92,7 +92,7 @@
         </fieldset>
         
             <div class="input-group">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
             </div>
         </form>
     </div>
