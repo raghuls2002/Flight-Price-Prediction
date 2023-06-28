@@ -36,7 +36,8 @@ def time_categorizer(hr:int)->str:
     
 @app.route('/')
 def home():
-    return render_template('form.html',  label_map = label_map)
+    min_date = (datetime.now()+ timedelta(days=1)).strftime('%Y-%m-%dT%H:%M')
+    return render_template('form.html',  label_map = label_map, min_date = min_date)
 
 @app.route('/submit', methods=['POST'])
 def register():
